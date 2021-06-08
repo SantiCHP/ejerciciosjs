@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compendio de ejercicios JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./app.js"></script>
+</head>
+
+<body>
+    <header class="cabecera">
+        <h1>Compendio de ejercicios JavaScript - UF1842</h1>
+    </header>
+    <section class="main">
+        <article class="article-01">
+            <h2>Práctica 1</h2>
+            <div class="exercise">
+                <p class="enunciado">1.- Crear dos variables y calcular su suma</p>
+                <p>Código de ejercicio como se hizo inicialmente</p>
+                <div class="show-code">
+                    let a = 4;
+                    <br>
+                    let b = 6;
+                    <br>
+                    let valor_a = "a es igual a: ";
+                    <br>
+                    let valor_b = "b es igual a: ";
+                    <br>
+                    let resultado1="La suma de a + b es:"
+                    <br>
+                    let c = a + b;
+                    <br>
+                    console.log(valor_a,a);
+                    <br>
+                    console.log(valor_b,b);
+                    <br>
+                    console.log(resultado1,c);
+                </div>
+                <p>Código de ejercicio hecho con funciones:</p>
+                <div class="show-code">
+                    function suma(a, b) {
+                    <br>
+                    c = a+b;
+                    <br>
+                    return c;
+                    <br>
+                    }
+                    <br>
+                    suma(4,8);
+                    <br>
+                    console.log(`Resultado: ${c}`);
+                </div>
+            </div>
+            <div class="exercise">
+                <p class="enunciado">2 - Dado un número de minutos convertirlos en segundos</p>
+                <p>Código de ejercicio como se hizo inicialmente</p>
+                <div class="show-code">
+                    let minutos = 5;
+                    <br>
+                    let segundos = Math.floor(minutos * 60);
+                    <br>
+                    console.log(minutos+' minutos son '+segundos+' segundos');
+                </div>
+                <p>Código de ejercicio hecho con funciones:</p>
+                <div class="show-code">
+                    function pasaMinutosASegundos(minutos) {
+                    <br>
+                    segundos = Math.floor(minutos * 60);
+                    <br>
+                    return segundos;
+                    <br>
+                    }
+                    <br>
+                    pasaMinutosASegundos(60);
+                    <br>
+                    console.log(`Resultado: ${segundos} segundos`);
+                </div>
+            </div>
+            <div class="exercise">
+                <p class="enunciado">3.- Calcular el área de un triángulo conociendo su base y su altura
+                    <br>
+                    Fórmula del área de un triángulo A = (b*a)/2
+                </p>
+                <p>Código de ejercicio como se hizo inicialmente</p>
+                <div class="show-code">
+                    let base = 30;
+                    <br>
+                    let altura = 45;
+                    <br>
+                    console.log('Teniendo en cuenta que la base es '+base+'mm y la altura es '+altura+'mm ,el área del
+                    triángulo es: '+(base*altura)/2+'mm');
+                </div>
+                <p>Código de ejercicio hecho con funciones:</p>
+                <div class="show-code">
+                    function areaTriangulo(base,altura) {
+                    <br>
+                    area = (base*altura)/2;
+                    <br>
+                    return area;
+                    <br>
+                    }
+                    <br>
+                    areaTriangulo(45,80);
+                    <br>
+                    console.log(`Resultado: ${area} mm`);
+                </div>
+            </div>
+            <div class="exercise">
+                <p class="enunciado">
+                    4.- Convertir la edad de cada uno en días
+                </p>
+                <p>Código de ejercicio como se hizo inicialmente</p>
+                <div class="show-code">
+                    let years = 40;
+                    <br>
+                    let dias = Math.floor(years*365);
+                    <br>
+                    console.log('Si yo tengo '+years+'años, entonces puedo decir que ya he vivido '+dias+' días');
+                </div>
+                <p>Código de ejercicio hecho con funciones:</p>
+                <div class="show-code">
+
+                    function edadEnDias(edad) {
+                    <br>
+                    dias = Math.floor(edad*365);
+                    <br>
+                    return dias;
+                    <br>
+                    }
+                    <br>
+                    edadEnDias(40);
+                    <br>
+                    console.log(`Resultado: almenos ${dias} días vividos`);
+                </div>
+            </div>
+            <div class="exercise">
+                <p class="enunciado">
+                    5.- Calcular el perímetro de un rectángulo y asignarlo a una variable
+                    <br>
+                    fórmula del perímetro de un rectángulo -- Perímetro = 2(altura+base)
+                </p>
+                <p>Código de ejercicio como se hizo inicialmente</p>
+                <div class="show-code">
+                    let x = 20;
+                    <br>
+                    let y = 12;
+                    <br>
+                    let perimetro = (2*(x+y))
+                    <br>
+                    console.log('Si la base mide '+x+'mm y uno de sus lados mide '+y+'mm, el perímetro del resctángulo
+                    es de: '+perimetro+'mm');
+                </div>
+                <p>Código de ejercicio hecho con funciones:</p>
+                <div class="show-code">
+                    function perRectangulo(x,y) {
+                    <br>
+                    per = (2*(x+y));
+                    <br>
+                    return per;
+                    <br>
+                    }
+                    <br>
+                    perRectangulo(40,25);
+                    <br>
+                    console.log(`Resultado del perímetro de un rectángulo: ${per} mm`);
+                </div>
+            </div>
+            <div class="exercise">
+                <p class="enunciado">
+                    6 - Asignar a dos variables nuestro nombre y apellidos. Crear una variable que contenga el nombre
+                    completo
+                </p>
+                <p>Código de ejercicio como se hizo inicialmente</p>
+                <div class="show-code">
+                    let nombre ="Santiago del Carmelo";
+                    <br>
+                    let apellidos = "Castellano Hernández";
+                    <br>
+                    let nombreCompleto = nombre+' '+apellidos;
+                    <br>
+                    console.log('Mi nombre completo es: '+nombreCompleto);
+                </div>
+                <p>Código de ejercicio hecho con funciones:</p>
+                <div class="show-code">
+                    function nombreCompleto(nombre,apellidos) {
+                    <br>
+                    completo = nombre+' '+apellidos;
+                    <br>
+                    return completo;
+                    <br>
+                    }
+                    <br>
+                    nombreCompleto('Santiago del Carmelo','Castellano Hernández');
+                    <br>
+                    console.log(`Resultado de nombre completo: ${completo}`);
+                </div>
+            </div>
+            <div class="exercise">
+                <p class="enunciado">
+                    7.- Estás contando el número de puntos de un partido de baloncesto. Ya sabes cuales han sido los
+                    aciertos de 2 puntos y los de 3. Representar en una variable la puntuación final del partido
+                </p>
+                <p>Código de ejercicio como se hizo inicialmente</p>
+                <div class="show-code">
+                    //creo la variable con el número de tiros encestados de dos puntos
+                    <br>
+                    let dobles = 16;
+                    <br>
+                    //creo una variable y multiplico el número de tiros dobles x2
+                    <br>
+                    let totalDobles = dobles * 2;
+                    <br>
+                    //creo una variable que almacena los tiros de tres puntos encestados
+                    <br>
+                    let triples = 8;
+                    <br>
+                    //creo una variable y multiplico los triples x3
+                    <br>
+                    let totalTriples = triples * 3;
+                    <br>
+                    //ahora sumo los totales de puntos dobles y triples para obtener la puntuación total
+                    <br>
+                    let puntosTotales = totalDobles + totalTriples;
+                    <br>
+                    console.log('Tiros de dobles encestados: '+dobles);
+                    <br>
+                    console.log('Puntos dobles obtenidos: '+totalDobles);
+                    <br>
+                    console.log('Tiros de triples encestados: '+triples);
+                    <br>
+                    console.log('Puntos triples obtenidos: '+totalTriples);
+                    <br>
+                    console.log('Puntuación total obtenida en el partido por el equipo de los Nerds: '+puntosTotales);
+                </div>
+                <p>Código de ejercicio hecho con funciones:</p>
+                <div class="show-code">
+                    function puntosPartido(dobles,triples) {
+                    <br>
+                    total = (dobles*2) + (triples*3);
+                    <br>
+                    return total;
+                    <br>
+                    }
+                    <br>
+                    puntosPartido(12,10);
+                    <br>
+                    console.log(`Resultado puntos totales del partido: ${total}`);
+                </div>
+            </div>
+            <div class="exercise">
+                <p class="enunciado">
+                    8.- En un equipo de futbol sabemos cuales son los partidos ganados, empatados y perdidos durante 20
+                    jornadas. Calcular la puntuación actual del equipo. Si ganas te llevas 3 puntos, si empatas 1 y si
+                    pierdes 0
+                </p>
+                <p>Código de ejercicio como se hizo inicialmente</p>
+                <div class="show-code">
+                    //variable que almacena los partidos ganados
+                    <br>
+                    let ganados = 7;
+                    <br>
+                    //variable con los puntos de los partidos ganados
+                    <br>
+                    let puntosGanados = ganados * 3;
+                    <br>
+                    //variable que almacena los partidos ganados
+                    <br>
+                    let empatados = 4;
+                    <br>
+                    //variables con los puntos de los partidos empatados
+                    <br>
+                    let puntosEmpatados = empatados * 1;
+                    <br>
+                    //variable con los partidos perdidos
+                    <br>
+                    let perdidos = 2;
+                    <br>
+                    //total de jornadas de la liga
+                    <br>
+                    let jornadas = 20;
+                    <br>
+                    //variable que indica las jornadas jugadas de la liga hasta ahora
+                    <br>
+                    let jornadasJugadas = ganados + empatados + perdidos;
+                    <br>
+                    //variable de puntos ganados actualmente
+                    <br>
+                    let totalPuntos = puntosGanados + puntosEmpatados;
+                    <br>
+                    //variable que nos indica el número de jornadas restantes
+                    <br>
+                    let jornadasRestantes = jornadas - jornadasJugadas;
+                    <br>
+                    //se muestran los resultados por consola
+                    <br>
+                    console.log('Partidos ganados: '+ganados);
+                    <br>
+                    console.log('Puntos obtenidos por partidos ganados: '+puntosGanados);
+                    <br>
+                    console.log('Partidos empatados: '+empatados);
+                    <br>
+                    console.log('Puntos obtenidos por partidos empatados: '+puntosEmpatados);
+                    <br>
+                    console.log('Partidos perdidos: '+perdidos);
+                    <br>
+                    console.log('Jornadas que ha jugado el equipo hasta el momento: '+jornadasJugadas);
+                    <br>
+                    console.log('Puntos ganados hasta el momento: '+totalPuntos);
+                    <br>
+                    console.log('Jornadas restantes hasta concluir la liga: '+jornadasRestantes);
+                </div>
+                <p>Código de ejercicio hecho con funciones:</p>
+                <div class="show-code">
+                    function puntuacionActual(ganados,empatados) {
+                    <br>
+                    totalPuntos = (ganados*3) + empatados;
+                    <br>
+                    return totalPuntos;
+                    <br>
+                    }
+                    <br>
+                    puntuacionActual(8,3);
+                    <br>
+                    console.log(`Actualmente el equipo tiene: ${totalPuntos} puntos`);
+                </div>
+            </div>
+            <div class="exercise">
+                <p class="enunciado">
+                    9 - Revisa el siguiente código y comenta lo que deduces del mismo
+                    <br>
+                    const numero = 5;
+                    <br>
+                    let cuadrado = numero**2;
+                </p>
+                <p>Código de ejercicio como se hizo inicialmente</p>
+                <div class="show-code">
+                    const numero = 5; //la variable constante número toma el valor de 5
+                    <br>
+                    let cuadrado = numero**2; //la variable numero se eleva al cuadrado, teniendo el valor de 5 al
+                    <br>
+                    cuadrado que es 25
+                </div>
+                <p>Código de ejercicio hecho con funciones:</p>
+                <div class="show-code">
+                    function elevaCuadrado(numero) {
+                    <br>
+                    cuadrado = numero ** 2;
+                    <br>
+                    return cuadrado;
+                    <br>
+                    }
+                    <br>
+                    elevaCuadrado(5)
+                    <br>
+                    console.log(`Resultado: ${cuadrado}`);
+                </div>
+            </div>
+            <div class="exercise">
+                <p class="enunciado">
+                    10.- Escribe el siguiente código y comenta lo que deduces del mismo
+                    <br>
+                    nombre = "Fran Davila";
+                    <br>
+                    let puntuacion = 10;
+                    <br>
+                    let salida = nombre + puntuacion;
+                </p>
+                <p>Código de ejercicio como se hizo inicialmente</p>
+                <div class="show-code">
+                    nombre = "Fran Davila"; //se declara la variable nombre y se le asigna la string
+                    <br>
+                    let puntuacion = 10; //se declara la variable puntuación y se le asigna el valor 10
+                    <br>
+                    let salida = nombre + puntuacion; // se declara la variable salida y se concatena el valor de las
+                    <br>
+                    variables definidas anteriormente.
+                </div>
+                <p>Código de ejercicio hecho con funciones:</p>
+                <div class="show-code">
+                    function aplicaNota(nombre,puntuacion) {
+                    <br>
+                    nota = nombre+' - '+puntuacion;
+                    <br>
+                    return nota;
+                    <br>
+                    }
+                    <br>
+                    aplicaNota('Santiago Castellano Hernández',11)
+                    <br>
+                    console.log(`Nota aplicada: ${nota}`);
+                </div>
+            </div>
+            <div class="exercise">
+                <p class="enunciado">
+                    11 - Escribe un código que admita un número positivo y lo convierta en negativo.
+                </p>
+                <p>Código de ejercicio como se hizo inicialmente</p>
+                <div class="show-code">
+                    let numerillo = 45;
+                    <br>
+                    console.log(numerillo);
+                    <br>
+                    let numerilloNegativo= numerillo * (-1);
+                    <br>
+                    console.log(numerilloNegativo);
+                </div>
+                <p>Código de ejercicio hecho con funciones:</p>
+                <div class="show-code">
+                    function invierteSigno(numerillo) {
+                    <br>
+                    invertido = numerillo * (-1);
+                    <br>
+                    return invertido;
+                    <br>
+                    }
+                    <br>
+                    invierteSigno(4567);
+                    <br>
+                    console.log(`Resultado: ${invertido}`);
+                </div>
+            </div>
+        </article>
+
+    </section>
+</body>
+
+</html>
